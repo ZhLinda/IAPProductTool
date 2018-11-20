@@ -39,11 +39,17 @@ review_image：审核商品快照名称。快照为1080×1920 jpg 格式，放�
 ## 使用
 
 创建商品：
+
+在第一次上传商品时使用。
+
 ```
 ruby index.rb shsg create
 ```
 
 修改商品：
+
+在 product.xlsx 的商品信息有修改时使用（product id 无法修改）
+
 ```
 ruby index.rb shsg modify
 ```
