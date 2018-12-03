@@ -7,6 +7,10 @@
 
 安装 fastlane： `[sudo] gem install fastlane -NV`
 
+安装 spaceship：`[sudo] gem install spaceship`
+
+安装 roo：`[sudo] gem install roo`
+
 根目录下创建 res。
 
 在 res 目录下创建自定义文件夹，用来存放应用信息，目录结构如下：
@@ -33,8 +37,9 @@ desc：商品描述，10个字以上。
 
 review_desc：审核备注。
 
-review_image：审核商品快照名称。快照为1080×1920 jpg 格式，放在 res 的应用目录下。
+review_image：审核商品快照名称。快照为 750 × 1334 jpg 格式，放在 res 的应用目录下。
 
+status：0 代表执行，1 代表跳过
 
 ## 使用
 
@@ -59,6 +64,16 @@ ruby index.rb shsg modify
 第二个参数为 create | modify 。
 
 注：第一次运行脚本时可能会让你输入开发账号的密码。
+
+## 遇到的问题
+
+1.
+
+```
+error=ITC.response.error.IAP_CREATION_NOT_ALLOWED
+```
+
+发现是因为 itunesconnect 的条款没有更新，登录到 itunesconnect 更新下条款就可以了。
 
 
 
