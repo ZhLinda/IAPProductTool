@@ -21,6 +21,9 @@ module Devyuan
 
       @products.each do |product|
 
+        status = product['status']
+        next if status == 0
+
         tier = get_tier(product['amount']) # 获取商品价格等级
 
         product_id = "#{@bundle_id}.#{product['id']}"
@@ -62,6 +65,9 @@ module Devyuan
 
     def modify()
       @products.each do |product|
+
+        status = product['status']
+        next if status == 0
 
         product_id = "#{@bundle_id}.#{product['id']}"
 
@@ -109,6 +115,7 @@ module Devyuan
         88 => 13,
         98 => 15,
         128 => 20,
+        188 => 28,
         198 => 30,
         228 => 34,
         288 => 46,
