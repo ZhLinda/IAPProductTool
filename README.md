@@ -76,7 +76,7 @@ error=ITC.response.error.IAP_CREATION_NOT_ALLOWED
 发现是因为 itunesconnect 的条款没有更新，登录到 itunesconnect 更新下条款就可以了。
 
 ## 参考
-(Spaceship)[https://github.com/fastlane/fastlane/tree/master/spaceship/docs]
+[Spaceship](https://github.com/fastlane/fastlane/tree/master/spaceship/docs)
 
 
 
