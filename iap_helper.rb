@@ -13,7 +13,8 @@ module Devyuan
       @bundle_id = bundle_id
       @products = products
       Spaceship::Tunes.login(account) # 登录 itunesconnect
-      @app = Spaceship::Application.find(bundle_id)
+      Spaceship::Tunes.select_team
+      @app = Spaceship::Tunes::Application.find(bundle_id)
     end
 
     def create()
@@ -110,10 +111,24 @@ module Devyuan
     def get_tier(amount)
       tier = {
         6 => 1,
+        12 => 2,
+        18 => 3,
+        25 => 4,
         30 => 5,
+        40 => 6,
+        45 => 7,
         50 => 8,
+        60 => 9,
+        68 => 10,
+        73 => 11,
+        78 => 12,
         88 => 13,
+        93 => 14,
         98 => 15,
+        108 => 16,
+        113 => 17,
+        118 => 18,
+        123 => 19,
         128 => 20,
         188 => 28,
         198 => 30,
